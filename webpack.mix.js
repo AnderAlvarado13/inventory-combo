@@ -30,5 +30,6 @@ mix.js('resources/js/app.js', 'public/js')
            require('autoprefixer'),
        ],
    });
+mix.copyDirectory('resources/images', 'public/images');
 
 

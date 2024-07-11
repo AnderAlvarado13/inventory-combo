@@ -4,7 +4,7 @@
     <title>Inventory - Comboplay</title>
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
-<body style="background-image: url({{url('storage/images/1309251.jpeg')}});
+<body style="background-image: url({{url('images/1309251.jpeg')}});
 background-size: cover;
   background-position: center;">
     <header>
