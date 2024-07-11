@@ -1,27 +1,40 @@
 @extends('layouts.app')
 
 @section('content')
-    <h1>Logs</h1>
-    <table>
-        <thead>
-            <tr>
-                <th>Asset</th>
-                <th>Employee</th>
-                <th>Assigner</th>
-                <th>Payload</th>
-                <th>Timestamp</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach($logs as $log)
-                <tr>
-                    <td>{{ $log->asset->serial_code }}</td>
-                    <td>{{ $log->employee->name }}</td>
-                    <td>{{ $log->assigner }}</td>
-                    <td>{{ $log->payload }}</td>
-                    <td>{{ $log->created_at }}</td>
-                </tr>
-            @endforeach
-        </tbody>
-    </table>
+<div class="container mt-5">
+    <div class="card">
+        <div class="card-header text-center">
+            <h1 class="card-title mb-0">Logs</h1>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-striped table-bordered">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>Activo</th>
+                            <th>Empleado</th>
+                            <th>Asignador</th>
+                            <th>Fecha y Hora</th>
+                            <th>Acción</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach($logs as $log)
+                            <tr>
+                                <td>{{ $log->asset->serial_code }}</td>
+                                <td>{{ $log->employee->name }}</td>
+                                <td>{{ $log->assigner }}</td>
+                                <td>{{ $log->created_at }}</td>
+                                <td>
+                                    <a href="{{ route('logs.show', $log->id) }}" class="btn btn-info btn-sm">Ver Detalles</a>
+                                </td>
+                            </tr>
+                        @endforeach
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
 @endsection

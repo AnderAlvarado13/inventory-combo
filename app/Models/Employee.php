@@ -16,6 +16,11 @@ class Employee extends Model
         return $this->hasMany(CompanyAsset::class);
     }
 
+    public function companyAssets()
+    {
+        return $this->hasMany(CompanyAsset::class);
+    }
+
     public function logs()
     {
         return $this->hasMany(Log::class);

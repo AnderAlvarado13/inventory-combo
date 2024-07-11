@@ -59,6 +59,7 @@ class LogController extends Controller
      */
     public function show($id)
     {
+        $log = Log::findOrFail($id);
         return view('logs.show', compact('log'));
     }
 

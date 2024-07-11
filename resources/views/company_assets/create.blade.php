@@ -31,8 +31,8 @@
                 </select>
             </div>
             <div class="d-flex justify-content-between">
-                <button type="submit" class="btn btn-success">Enviar</button>
-                <a href="{{ route('company_assets.index') }}" class="btn btn-secondary">Volver a la Lista</a>
+                <button type="submit" class="btn btn-primary">Crear</button>
+                <a href="{{ route('company_assets.index') }}" class="btn btn-secondary">Volver</a>
             </div>
         </form>
     </div>
